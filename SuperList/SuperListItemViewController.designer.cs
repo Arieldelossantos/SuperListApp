@@ -11,11 +11,8 @@ using UIKit;
 
 namespace SuperList
 {
-    [Register ("TasksViewController")]
-    partial class TasksViewController
+    [Register ("SuperListItemViewController")]
+    partial class SuperListItemViewController
     {
-        void ReleaseDesignerOutlets ()
-        {
-        }
     }
 }
