@@ -5,10 +5,10 @@ namespace SuperList.Model
 {
     public class SuperListItem : RealmObject
     {
-        [PrimaryKey,]
+        [PrimaryKey]
         public string Id { get; set; }
 
-        public string SLName
+        public string SLIName
         {
             get;
             set;

@@ -12,7 +12,10 @@ using UIKit;
 namespace SuperList
 {
     [Register ("SuperListItemViewController")]
-    partial class SuperListItemViewController
+    partial class SuperListItemsViewController
     {
+        void ReleaseDesignerOutlets ()
+        {
+        }
     }
 }

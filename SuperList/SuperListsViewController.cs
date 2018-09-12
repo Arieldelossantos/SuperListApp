@@ -47,6 +47,7 @@ namespace SuperList
     {
         Realm _Realm;
 
+        List<Model.SuperList> AllSuperList;
         public SuperListsViewController(IntPtr handle) : base(handle)
         {
             _Realm = Realm.GetInstance();
@@ -54,10 +55,28 @@ namespace SuperList
 
         public override void ViewWillAppear(bool animated)
         {
-            var _allLists = _Realm.All<Model.SuperList>();
+            AllSuperList = _Realm.All<Model.SuperList>().ToList();
 
-            TableView.Source = new SuperListTableSouce(_allLists.ToList());
+            TableView.Source = new SuperListTableSouce(AllSuperList);
 
+        }
+        public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
+        {
+            base.PrepareForSegue(segue, sender);
+
+            if (segue.Identifier == "showDetails")
+            {
+                var content = AllSuperList[TableView.IndexPathForSelectedRow.Row];
+
+                var sliViewController = segue.DestinationViewController as SuperListItemsViewController;
+
+                if (sliViewController != null)
+                {
+                    sliViewController.SLId = content.Id;
+
+                }
+
+            }
         }
 
         public override void ViewDidLoad()

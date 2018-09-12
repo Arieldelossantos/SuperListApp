@@ -161,9 +161,9 @@
     </Compile>
     <Compile Include="Model\SuperList.cs" />
     <Compile Include="Model\SuperListItem.cs" />
-    <Compile Include="SuperListItemViewController.cs" />
-    <Compile Include="SuperListItemViewController.designer.cs">
-      <DependentUpon>SuperListItemViewController.cs</DependentUpon>
+    <Compile Include="SuperListItemsViewController.cs" />
+    <Compile Include="SuperListItemsViewController.designer.cs">
+      <DependentUpon>SuperListItemsViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="CreateSLIViewController.cs" />
     <Compile Include="CreateSLIViewController.designer.cs">

@@ -9,6 +9,7 @@ namespace SuperList.Model
         [PrimaryKey]
         public string Id { get; set; }
 
+        public string SLId { get; set; }
         public string SLName
         {
             get;
